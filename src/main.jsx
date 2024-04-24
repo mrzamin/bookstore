@@ -1,56 +1,43 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
 
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from 'react-router-dom';
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-import Layout from './routes/layout';
-import NotMatch from './routes/not-match';
-import RentPage from './routes/rent';
-import BuyPage from './routes/buy';
-import SellPage from './routes/sell';
-import HomePage from './routes/home';
-import NewsPage from './routes/news';
-import Mortgage from './routes/mortgage';
+import Layout from "./pages/layout";
+import ErrorPage from "./pages/error";
+import ShopPage from "./pages/shop";
+import PersonalGrowthPage from "./pages/personalgrowth";
+import EntrepreneurshipPage from "./pages/entrepreneurship";
+import HomePage from "./pages/home";
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: "/",
     element: <Layout />,
-    errorElement: <NotMatch />,
+    errorElement: <ErrorPage />,
     children: [
       {
         index: true,
         element: <HomePage />,
       },
       {
-        path: 'rent',
-        element: <RentPage />,
+        path: "shop",
+        element: <ShopPage />,
       },
       {
-        path: 'buy',
-        element: <BuyPage />,
+        path: "personalgrowth",
+        element: <PersonalGrowthPage />,
       },
       {
-        path: 'sell',
-        element: <SellPage />,
-      },
-      {
-        path: 'news',
-        element: <NewsPage />,
-      },
-      {
-        path: 'mortgage',
-        element: <Mortgage />,
+        path: "entrepreneurship",
+        element: <EntrepreneurshipPage />,
       },
     ],
   },
 ]);
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <RouterProvider router={router} />
   </React.StrictMode>
