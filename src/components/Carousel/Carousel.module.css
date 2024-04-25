@@ -1,0 +1,36 @@
+.carouselItem {
+  background-color: grey;
+  height: 300px;
+  width: 300px;
+  color: black;
+  border-radius: 15px;
+
+  border: 1px solid blue;
+}
+
+.pleaseCenter {
+  display: grid;
+  place-items: center;
+  gap: 1rem;
+}
+
+.carousel {
+  width: 950px;
+  margin: auto;
+}
+
+.bookCover {
+  width: 125px;
+}
+
+@media (max-width: 1000px) {
+  .carousel {
+    width: 600px;
+  }
+}
+
+@media (max-width: 600px) {
+  .carousel {
+    width: 300px;
+  }
+}

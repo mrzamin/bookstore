@@ -1,0 +1,59 @@
+.checkout {
+  display: flex;
+  justify-content: space-around;
+}
+
+h3 {
+  text-align: center;
+}
+.rightContainer {
+  border: 1px solid grey;
+  padding: 2.5rem;
+  border-radius: 8px;
+  width: 350px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.leftContainer {
+  max-width: 900px;
+  flex: 1;
+}
+
+.subtotal,
+.taxes,
+.shipping,
+.total {
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  cursor: pointer;
+  font-weight: bold;
+  color: white;
+  background-color: #f43f5e;
+  border: none;
+  border-radius: 8px;
+  height: 50px;
+  width: 100%;
+}
+button:hover {
+  background-color: #f72e4f;
+}
+
+@media screen and (max-width: 1200px) {
+  .checkout {
+    flex-direction: column;
+  }
+
+  .rightContainer {
+    width: auto;
+  }
+
+  .leftContainer {
+    max-width: none;
+  }
+}
