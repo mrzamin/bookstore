@@ -2,7 +2,7 @@ import { UserRoundX } from "lucide-react";
 import { Link } from "react-router-dom";
 import cartIcon from "../../../public/icons/cart.png";
 
-const UserProfile = () => {
+const Cart = () => {
   return (
     <div className="register">
       <div className="block md:hidden">
@@ -11,7 +11,7 @@ const UserProfile = () => {
         </button>
       </div>
       <div className="hidden md:block">
-        <Link to={`#`} className="cart">
+        <Link to="/checkout" className="cart">
           <div>Cart</div>
           <img src={cartIcon} width="40px" alt="cart" />
         </Link>
@@ -20,4 +20,4 @@ const UserProfile = () => {
   );
 };
 
-export default UserProfile;
+export default Cart;
