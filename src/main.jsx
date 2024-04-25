@@ -10,7 +10,8 @@ import ShopPage from "./pages/shop";
 import PersonalGrowthPage from "./pages/personalgrowth";
 import EntrepreneurshipPage from "./pages/entrepreneurship";
 import HomePage from "./pages/home";
-
+import BookDetail from "./components/Books/BookDetail/BookDetail";
+import Checkout from "./components/Checkout/Checkout";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -22,16 +23,24 @@ const router = createBrowserRouter([
         element: <HomePage />,
       },
       {
-        path: "shop",
+        path: "/shop",
         element: <ShopPage />,
       },
       {
-        path: "personalgrowth",
+        path: "/personalgrowth",
         element: <PersonalGrowthPage />,
       },
       {
-        path: "entrepreneurship",
+        path: "/entrepreneurship",
         element: <EntrepreneurshipPage />,
+      },
+      {
+        path: "/shop/:slug",
+        element: <BookDetail />,
+      },
+      {
+        path: "/checkout",
+        element: <Checkout />,
       },
     ],
   },
