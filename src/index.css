@@ -1,5 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700&display=swap");
 
+.cart {
+  display: flex;
+  gap: 0.5rem;
+  align-content: center;
+  text-align: center;
+  border: 1px solid black;
+}
 * {
   box-sizing: border-box;
   margin: 0;
@@ -7,13 +14,13 @@
 }
 
 :root {
-  --mainColor: #2b2b2b;
+  --mainColor: #f43f5e;
   --borderColor: #cacaca;
 }
 
 body,
 :root {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 /* ================================ 
@@ -198,7 +205,7 @@ Hero
   align-items: center;
   justify-content: center;
   background-color: #5c5c5c;
-  height: 450px;
+  height: 400px;
 }
 
 .img_wrapper {
@@ -348,13 +355,14 @@ MEDIA QUERIES
   }
 
   /* .nav__container ul li:focus-within .dropdown, */
-  .nav__container ul li:hover .dropdown {
+  .nav__container ul li:hover .dropdown,
+  .nav__container ul li:focus-within .dropdown {
     visibility: visible;
   }
 
   .nav_item_content:hover a:before,
   .nav_item_content .active:before {
-    content: '';
+    content: "";
     position: absolute;
     left: 0;
     bottom: 0;
