@@ -1,0 +1,90 @@
+.bookDetail {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 50px;
+  gap: 50px;
+}
+
+.rightContainer {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  gap: 0.8rem;
+}
+
+.imageContainer {
+  width: 420px;
+  height: 420px;
+  background-color: #f6f3f4;
+  border-radius: 8px;
+  position: relative;
+
+  display: grid;
+  place-items: center;
+}
+
+.img {
+  max-height: 280px;
+}
+
+.addButton,
+.removeButton {
+  max-width: 300px;
+  cursor: pointer;
+  font-weight: bold;
+  color: white;
+  background-color: #f43f5e;
+  border: none;
+  border-radius: 8px;
+  height: 50px;
+  width: 100%;
+}
+
+.addButton:hover,
+.removeButton:hover {
+  background-color: #f72e4f;
+}
+
+.description {
+  line-height: 1.5;
+}
+
+.price {
+  font-weight: 600;
+}
+
+@media screen and (max-width: 1000px) {
+  .imageContainer {
+    width: 350px;
+    height: 350px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .bookDetail {
+    flex-direction: column;
+  }
+  .leftContainer {
+    flex: 1;
+    align-self: stretch;
+  }
+
+  .imageContainer {
+    width: auto;
+    height: auto;
+    aspect-ratio: 1/1;
+  }
+  .addButton,
+  .removeButton {
+    max-width: none;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .imageContainer {
+    background-color: transparent;
+  }
+}
