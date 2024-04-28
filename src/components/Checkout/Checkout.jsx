@@ -9,6 +9,17 @@ const Checkout = () => {
 
   const inCart = products.filter((product) => product.inBag === true);
 
+  const subtotal = inCart
+    .reduce((total, book) => total + book.price * book.quantity, 0)
+    .toFixed(2);
+
+  const taxes = (parseFloat(subtotal) * 0.07).toFixed(2);
+
+  const handleProcessOrder = () => {
+    alert(
+      "Congratulations! Your order would have been placed now if this were a real store."
+    );
+  };
   return (
     <div>
       <h1>Shopping Cart</h1>
@@ -28,22 +39,22 @@ const Checkout = () => {
           <h3>Order Summary</h3>
           <div className={styles.subtotal}>
             <div>Subtotal</div>
-            <div>Subtotal</div>
+            <div>${subtotal}</div>
           </div>
           <div className={styles.taxes}>
             <div>Taxes</div>
-            <div>Taxes</div>
+            <div>${taxes}</div>
           </div>
           <div className={styles.shipping}>
             <div>Shipping</div>
-            <div>Shipping</div>
+            <div>Free</div>
           </div>
           <div className={styles.total}>
             <div>Total</div>
-            <div>Total</div>
+            <div>${parseFloat(subtotal + taxes).toFixed(2)}</div>
           </div>
 
-          <button>Process Order</button>
+          <button onClick={handleProcessOrder}>Process Order</button>
           <Link to="/shop">Continue Shopping</Link>
         </div>
       </div>

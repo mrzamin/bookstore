@@ -11,6 +11,7 @@ h3 {
   padding: 2.5rem;
   border-radius: 8px;
   width: 350px;
+  height: min-content;
 
   display: flex;
   flex-direction: column;
