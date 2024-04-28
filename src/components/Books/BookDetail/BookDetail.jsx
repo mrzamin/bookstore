@@ -7,21 +7,18 @@ import styles from "./BookDetail.module.css";
 const BookDetail = () => {
   const { products, addToCart, removeFromCart } = useContext(StoreContext);
 
-  let inBag;
   const { slug } = useParams();
   const product = products.find((prod) => prod.slug === slug);
 
-  const [quantity, setQuantity] = useState(product.quantity);
+  let initialQuantity = product.inBag === true ? product.quantity : 1;
+  const [quantity, setQuantity] = useState(initialQuantity);
 
-  if (product.inBag) {
-    inBag = "true";
-  }
   const handleAddToCartClick = () => {
     addToCart(product, quantity);
   };
 
   const handleRemoveClick = () => {
-    removeFromCart(product, quantity);
+    removeFromCart(product);
     setQuantity(1);
   };
 
