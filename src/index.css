@@ -3,10 +3,28 @@
 .cart {
   display: flex;
   gap: 0.5rem;
-  align-content: center;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  border: 1px solid black;
 }
+
+.navCart {
+  position: relative;
+  display: flex;
+}
+
+.itemsInCart {
+  position: absolute;
+  background-color: var(--mainColor);
+  font-size: 0.5rem;
+  color: white;
+  top: 0;
+  right: 0;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -198,6 +216,9 @@ End Global
 Hero
 =======================================*/
 
+/* .hero button {
+  max-width: 200px;
+} */
 .hero {
   display: flex;
   flex-direction: column;
