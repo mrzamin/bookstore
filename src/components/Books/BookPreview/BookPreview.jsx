@@ -4,18 +4,20 @@ import { Link } from "react-router-dom";
 
 import styles from "./BookPreview.module.css";
 
-const BookPreview = () => {
-  const { products } = useContext(StoreContext);
-
+const BookPreview = ({ products }) => {
   return (
-    <div>
+    <div className={styles.bookPreview}>
       <div className={styles.bookGrid}>
         {products.map((product) => (
           <Link to={product.slug} className={styles.bookCard} key={product.id}>
-            <img src={product.src} alt="book-cover" />
-            <div>{product.title}</div>
-            <div>{product.author}</div>
-            <div>{product.price}</div>
+            <img
+              src={product.src}
+              className={styles.bookCover}
+              alt="book-cover"
+            />
+            <div className={styles.productTitle}>{product.title}</div>
+            <div className={styles.productAuthor}>{product.author}</div>
+            <div>${product.price}</div>
           </Link>
         ))}
       </div>
