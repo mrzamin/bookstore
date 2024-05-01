@@ -55,6 +55,20 @@
   }
 
   .leftContainer {
+    gap: 0.5rem;
+  }
+
+  .delete {
+    width: 20px;
+    height: 20px;
+  }
+  .title,
+  .total,
+  .quantity {
+    font-size: 0.8rem;
+  }
+
+  .leftContainer {
     align-items: start;
   }
 

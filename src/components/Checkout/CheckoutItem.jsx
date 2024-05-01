@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect } from "react";
 import { StoreContext } from "../../Context.jsx";
 import styles from "./CheckoutItem.module.css";
 import BookQuantity from "../Books/BookQuantity/BookQuantity.jsx";
@@ -6,10 +6,22 @@ import { Link } from "react-router-dom";
 import deleteIcon from "../../../public/icons/deleteIcon.png";
 const CheckoutItem = ({ author, src, slug, title, price, id, quantity }) => {
   const { products, addToCart, removeFromCart } = useContext(StoreContext);
+  console.log(products);
+
+  const product = products.find((prod) => prod.id === id);
 
   const [amount, setAmount] = useState(quantity);
 
-  const total = price * amount;
+  const total = (price * amount).toFixed(2);
+
+  useEffect(() => {
+    addToCart(product, amount);
+  }, [amount]);
+
+  const handleDelete = () => {
+    alert("Are you sure you want to remove this item?");
+    removeFromCart(product);
+  };
   return (
     <div className={styles.checkoutItem}>
       <div className={styles.leftContainer}>
@@ -30,8 +42,13 @@ const CheckoutItem = ({ author, src, slug, title, price, id, quantity }) => {
       </div>
 
       <div className={styles.rightContainer}>
-        <div>${total}</div>
-        <img className={styles.delete} src={deleteIcon} alt="delete" />
+        <div className={styles.total}>${total}</div>
+        <img
+          className={styles.delete}
+          src={deleteIcon}
+          onClick={handleDelete}
+          alt="delete"
+        />
       </div>
     </div>
   );
