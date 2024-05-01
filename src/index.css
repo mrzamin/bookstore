@@ -6,9 +6,7 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-}
 
-.navCart {
   position: relative;
   display: flex;
 }
