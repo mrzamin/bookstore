@@ -6,10 +6,10 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import Layout from "./pages/layout";
 import ErrorPage from "./pages/error";
-import ShopPage from "./pages/shop";
+import ShopPage from "./pages/Shop/shop.jsx";
 import PersonalGrowthPage from "./pages/personalgrowth";
 import EntrepreneurshipPage from "./pages/entrepreneurship";
-import HomePage from "./pages/home";
+import HomePage from "./pages/Home/home.jsx";
 import BookDetail from "./components/Books/BookDetail/BookDetail";
 import Checkout from "./components/Checkout/Checkout";
 const router = createBrowserRouter([
