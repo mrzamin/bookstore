@@ -3,6 +3,18 @@
   justify-content: space-around;
 }
 
+.pageTitle {
+  margin: 1rem 0rem 1rem 0rem;
+}
+
+.arrowIcon {
+  width: 14px;
+}
+
+a {
+  color: black;
+}
+
 h3 {
   text-align: center;
 }
@@ -52,9 +64,24 @@ button:hover {
 
   .rightContainer {
     width: auto;
+    margin: 1rem;
   }
 
   .leftContainer {
     max-width: none;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .rightContainer {
+    font-size: 0.8rem;
+  }
+
+  h3 {
+    font-size: 0.9rem;
+  }
+
+  .pageTitle {
+    font-size: 1rem;
   }
 }

@@ -3,6 +3,7 @@ import { StoreContext } from "../../Context.jsx";
 import styles from "./Checkout.module.css";
 import CheckoutItem from "./CheckoutItem.jsx";
 import { Link } from "react-router-dom";
+import arrowIcon from "../../../public/icons/arrowIcon.png";
 
 const Checkout = () => {
   const { products, addToCart, removeFromCart } = useContext(StoreContext);
@@ -22,7 +23,7 @@ const Checkout = () => {
   };
   return (
     <div>
-      <h1>Shopping Cart</h1>
+      <h3 className={styles.pageTitle}>Shopping Cart</h3>
 
       <div className={styles.checkout}>
         <div className={styles.leftContainer}>
@@ -55,7 +56,10 @@ const Checkout = () => {
           </div>
 
           <button onClick={handleProcessOrder}>Process Order</button>
-          <Link to="/shop">Continue Shopping</Link>
+          <Link to="/shop">
+            Continue Shopping{" "}
+            <img src={arrowIcon} alt="arrow" className={styles.arrowIcon} />
+          </Link>
         </div>
       </div>
     </div>
