@@ -1,17 +1,14 @@
 .carouselItem {
-  background-color: grey;
+  background-color: rgb(245, 245, 245);
   height: 300px;
   width: 300px;
-  color: black;
+  font-size: 0.8rem;
   border-radius: 15px;
 
-  border: 1px solid blue;
-}
-
-.pleaseCenter {
   display: grid;
   place-items: center;
-  gap: 1rem;
+  align-content: center;
+  gap: 0.3rem;
 }
 
 .carousel {
@@ -19,18 +16,38 @@
   margin: auto;
 }
 
+.arrowIcon {
+  width: 12px;
+  height: 12px;
+}
+
+.callToAction {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
 .bookCover {
   width: 125px;
+  margin-bottom: 3px;
+}
+
+.author {
+  color: rgb(109, 107, 107);
 }
 
 @media (max-width: 1000px) {
   .carousel {
-    width: 600px;
+    width: 625px;
   }
 }
 
 @media (max-width: 600px) {
   .carousel {
     width: 300px;
+  }
+
+  .bookCover {
+    width: 100px;
   }
 }

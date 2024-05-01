@@ -5,6 +5,7 @@ import styles from "./Carousel.module.css";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import arrowIcon from "../../../public/icons/arrowIcon.png";
 
 const sampleBooks = [
   "The Power of One More",
@@ -23,8 +24,6 @@ const settings = {
   autoplay: true,
   pauseOnHover: true,
   autoplaySpeed: 2000,
-  nextArrow: <SampleNextArrow />,
-  prevArrow: <SamplePrevArrow />,
 
   responsive: [
     {
@@ -37,28 +36,6 @@ const settings = {
     },
   ],
 };
-
-function SampleNextArrow(props) {
-  const { className, style, onClick } = props;
-  return (
-    <div
-      className={className}
-      style={{ ...style, display: "block", background: "grey" }}
-      onClick={onClick}
-    />
-  );
-}
-
-function SamplePrevArrow(props) {
-  const { className, style, onClick } = props;
-  return (
-    <div
-      className={className}
-      style={{ ...style, display: "block", background: "grey" }}
-      onClick={onClick}
-    />
-  );
-}
 
 const Carousel = () => {
   const { products } = useContext(StoreContext);
@@ -76,15 +53,21 @@ const Carousel = () => {
           {sample.map((item) => (
             <Link to={`shop/${item.slug}`} key={item.id}>
               <div className={styles.carouselItem}>
-                <div className={styles.pleaseCenter}>
-                  {" "}
+                <img
+                  src={item.src}
+                  alt="book-cover"
+                  className={styles.bookCover}
+                />
+                <div>{item.title}</div>
+                <div className={styles.author}>{item.author}</div>
+                <Link to={`shop/${item.slug}`} className={styles.callToAction}>
+                  <div>Shop </div>
                   <img
-                    src={item.src}
-                    alt="book-cover"
-                    className={styles.bookCover}
+                    src={arrowIcon}
+                    className={styles.arrowIcon}
+                    alt="arrow"
                   />
-                  <div>{item.author}</div>
-                </div>
+                </Link>
               </div>
             </Link>
           ))}
