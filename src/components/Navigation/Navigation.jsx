@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import Container from "./Container";
-import MobileNavigationDrawer from "./MobileNavigationDrawer";
+import MobileNavigation from "./MobileNavigation";
 import { useState } from "react";
 import logo from "../../../public/icons/appLogo.png";
 import Cart from "./Cart/Cart";
@@ -31,7 +31,7 @@ const Navigation = () => {
           </div>
           <Cart />
           <div className="md:hidden absolute">
-            <MobileNavigationDrawer {...{ isDrawerOpen, setIsDrawerOpen }} />
+            <MobileNavigation {...{ isDrawerOpen, setIsDrawerOpen }} />
           </div>
         </div>
       </Container>

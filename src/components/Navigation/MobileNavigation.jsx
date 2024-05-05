@@ -2,7 +2,7 @@ import { X } from "lucide-react";
 import MegaMenu from "./MegaMenu/MegaMenu";
 import { useState } from "react";
 
-const MobileNavigationDrawer = ({ isDrawerOpen, setIsDrawerOpen }) => {
+const MobileNavigation = ({ isDrawerOpen, setIsDrawerOpen }) => {
   const [clicked, setClicked] = useState(null);
 
   const handleToggle = (index) => {
@@ -37,4 +37,4 @@ const MobileNavigationDrawer = ({ isDrawerOpen, setIsDrawerOpen }) => {
   );
 };
 
-export default MobileNavigationDrawer;
+export default MobileNavigation;
