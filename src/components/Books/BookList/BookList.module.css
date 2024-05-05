@@ -1,4 +1,4 @@
-.bookPreview {
+.bookList {
   padding: 2rem;
 }
 
@@ -70,7 +70,7 @@
     padding: 1rem;
   }
 
-  .bookPreview {
+  .bookList {
     padding: 1rem;
   }
 }

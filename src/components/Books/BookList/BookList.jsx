@@ -1,12 +1,10 @@
-import { useContext } from "react";
-import { StoreContext } from "../../../Context.jsx";
 import { Link } from "react-router-dom";
 
-import styles from "./BookPreview.module.css";
+import styles from "./BookList.module.css";
 
-const BookPreview = ({ products }) => {
+const BookList = ({ products }) => {
   return (
-    <div className={styles.bookPreview}>
+    <div className={styles.bookList}>
       <div className={styles.bookGrid}>
         {products.map((product) => (
           <Link to={product.slug} className={styles.bookCard} key={product.id}>
@@ -25,4 +23,4 @@ const BookPreview = ({ products }) => {
   );
 };
 
-export default BookPreview;
+export default BookList;
