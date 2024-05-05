@@ -3,13 +3,13 @@ import { Link } from "react-router-dom";
 import cartIcon from "../../../public/icons/cartIcon.png";
 import { useContext } from "react";
 import { StoreContext } from "../../Context";
-import CartTooltip from "./MegaMenu/Cart Tooltip/CartTooltip";
+import CartTooltip from "./MegaMenu/Cart/CartTooltip";
 import { Tooltip } from "react-tooltip";
 import "react-tooltip/dist/react-tooltip.css";
-import styles from "./MegaMenu/Cart Tooltip/CartTooltip.module.css";
+import styles from "./MegaMenu/Cart/CartTooltip.module.css";
 
 const Cart = () => {
-  const { products, addToCart, removeFromCart } = useContext(StoreContext);
+  const { products } = useContext(StoreContext);
 
   const inCart = products.filter((product) => product.inBag === true);
 
