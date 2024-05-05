@@ -43,9 +43,8 @@ body,
   position: relative;
 }
 
-/* ================================ 
-Global
-=======================================*/
+/* Global styles. */
+
 a {
   text-decoration: none;
 }
@@ -79,9 +78,7 @@ button {
   position: absolute;
 }
 
-/* ================================ 
-End Global
-=======================================*/
+/* Navigation styles. */
 
 .nav__header {
   position: static;
@@ -89,13 +86,6 @@ End Global
   background-color: white;
   border-bottom: 1px solid var(--borderColor);
 }
-
-/* .container {
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  padding-inline: 16px;
-} */
 
 .toolbar {
   display: flex;
@@ -195,32 +185,8 @@ End Global
   background-color: #fff;
 }
 
-/* .dropdown_content {
-  font-size: 0.875rem;
-} */
+/* Hero styles. */
 
-/* .dropdown_content h4 {
-  font-weight: 700;
-  line-height: 1.25rem;
-  margin-top: 0.75rem;
-} */
-
-/* .dropdown_content li {
-  line-height: 1.85rem;
-}
-
-.dropdown_content li a {
-  color: inherit;
-  font-weight: 400;
-} */
-
-/* ================================ 
-Hero
-=======================================*/
-
-/* .hero button {
-  max-width: 200px;
-} */
 .hero {
   display: flex;
   flex-direction: column;
@@ -268,9 +234,8 @@ Hero
   font-weight: 900;
 }
 
-/* ================================ 
-Mobile
-=======================================*/
+/* Mobile styles. */
+
 .mobile_navigation {
   position: fixed;
   z-index: 99;
@@ -310,21 +275,9 @@ Mobile
   background-color: white;
 }
 
-/* ================================ 
-MEDIA QUERIES
-=======================================*/
-
-/* @media (min-width: 768px) {
-  .container {
-    max-width: 768px;
-  }
-} */
+/* Media queries. */
 
 @media (min-width: 996px) {
-  /* .container {
-    max-width: 996px;
-  } */
-
   .md\:h-auto {
     height: auto;
   }
@@ -393,24 +346,7 @@ MEDIA QUERIES
     border-bottom: 2px solid var(--mainColor);
   }
 
-  /* .dropdown_content {
-    display: grid;
-    gap: 1.25rem;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  } */
-
-  /* .dropdown_content h4 {
-    margin-top: 0;
-    margin-bottom: 0.75rem;
-  } */
-
   .hero_title {
     font-size: 56px;
   }
 }
-
-/* @media (min-width: 1280px) {
-  .container {
-    max-width: 1280px;
-  }
-} */

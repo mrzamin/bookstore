@@ -47,7 +47,12 @@ const CheckoutPage = () => {
             <div>Total</div>
             <div>${parseFloat(subtotal + taxes).toFixed(2)}</div>
           </div>
-          <button onClick={handleProcessOrder}>Process Order</button>
+          <button
+            className={styles.checkoutButton}
+            onClick={handleProcessOrder}
+          >
+            Process Order
+          </button>
           <Link to="/shop">
             Continue Shopping{" "}
             <img src={arrowIcon} alt="arrow" className={styles.arrowIcon} />

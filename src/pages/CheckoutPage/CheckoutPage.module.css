@@ -43,7 +43,7 @@ a {
   justify-content: space-between;
 }
 
-button {
+.checkoutButton {
   cursor: pointer;
   font-weight: bold;
   color: white;
@@ -53,7 +53,7 @@ button {
   height: 50px;
   width: 100%;
 }
-button:hover {
+.checkoutButton:hover {
   background-color: #f72e4f;
 }
 
