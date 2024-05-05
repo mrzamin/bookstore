@@ -6,7 +6,7 @@ import { StoreContext } from "../../Context";
 import CartTooltip from "./MegaMenu/Cart Tooltip/CartTooltip";
 import { Tooltip } from "react-tooltip";
 import "react-tooltip/dist/react-tooltip.css";
-import styles from "../Navbar/MegaMenu/Cart Tooltip/CartTooltip.module.css";
+import styles from "./MegaMenu/Cart Tooltip/CartTooltip.module.css";
 
 const Cart = () => {
   const { products, addToCart, removeFromCart } = useContext(StoreContext);
