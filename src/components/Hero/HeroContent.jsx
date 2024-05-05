@@ -1,15 +1,15 @@
 import Container from "../Navbar/Container";
+import defaultHero from "../../../public/images/pastel-abstract.png";
+import styles from "./Hero.module.css";
 
-import hero from "../../../public/images/pastel-abstract.png";
-
-const HeroContent = ({ imageSrc = defaultBanner, children }) => {
+const HeroContent = ({ imageSrc = defaultHero, children }) => {
   return (
-    <div className="hero">
-      <div className="img_wrapper">
+    <div className={styles.hero}>
+      <div className={styles.img_wrapper}>
         <img src={imageSrc} alt="banner" height="450px" />
-        <div className="overlay"></div>
+        <div className={styles.overlay}></div>
       </div>
-      <div className="content">
+      <div className={styles.content}>
         <Container>{children}</Container>
       </div>
     </div>

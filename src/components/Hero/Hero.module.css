@@ -1,0 +1,52 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  background-color: #5c5c5c;
+  height: 400px;
+}
+
+.img_wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.img_wrapper img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  inset: 0px;
+  color: transparent;
+  object-fit: cover;
+}
+
+.img_wrapper .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: hsla(217, 33%, 17%, 0.4);
+}
+
+.hero .content {
+  color: #fff;
+  width: 100%;
+  position: relative;
+}
+
+.hero_title {
+  font-size: 52px;
+  font-weight: 900;
+}
+
+@media screen and (max-width: 400px) {
+  .hero_title {
+    font-size: 42px;
+  }
+}
