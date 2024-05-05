@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
-import Container from "../Container";
-import DropdownContent from "./DropdownContent";
+import Container from "../Container/Container";
+import DropdownContent from "./DropdownContent/DropdownContent";
 import { ChevronDown, ChevronUp } from "lucide-react";
 
 const MenuItem = ({

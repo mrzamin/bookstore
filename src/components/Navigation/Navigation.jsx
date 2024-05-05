@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Container from "./Container";
+import Container from "./Container/Container";
 import MobileNavigation from "./MobileNavigation";
 import { useState } from "react";
 import logo from "../../../public/icons/appLogo.png";
