@@ -1,21 +1,16 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { StoreContext } from "../../Context.jsx";
-import styles from "./Checkout.module.css";
-import CheckoutItem from "./CheckoutItem.jsx";
+import styles from "./CheckoutPage.module.css";
+import CheckoutItem from "../../components/Checkout/CheckoutItem.jsx";
 import { Link } from "react-router-dom";
 import arrowIcon from "../../../public/icons/arrowIcon.png";
 
-const Checkout = () => {
-  const { products, addToCart, removeFromCart } = useContext(StoreContext);
-
-  const inCart = products.filter((product) => product.inBag === true);
-
+const CheckoutPage = () => {
+  const { inCart } = useContext(StoreContext);
   const subtotal = inCart
     .reduce((total, book) => total + book.price * book.quantity, 0)
     .toFixed(2);
-
   const taxes = (parseFloat(subtotal) * 0.07).toFixed(2);
-
   const handleProcessOrder = () => {
     alert(
       "Congratulations! Your order would have been placed now if this were a real store."
@@ -24,12 +19,10 @@ const Checkout = () => {
   return (
     <div>
       <h3 className={styles.pageTitle}>Shopping Cart</h3>
-
       <div className={styles.checkout}>
         <div className={styles.leftContainer}>
           {inCart.length > 0 ? (
             inCart.map((item) => (
-              // <div key={item.id}>{item.author}</div>
               <CheckoutItem key={item.id} {...item}></CheckoutItem>
             ))
           ) : (
@@ -37,7 +30,7 @@ const Checkout = () => {
           )}
         </div>
         <div className={styles.rightContainer}>
-          <h3>Order Summary</h3>
+          <h3 className={styles.orderSummary}>Order Summary</h3>
           <div className={styles.subtotal}>
             <div>Subtotal</div>
             <div>${subtotal}</div>
@@ -54,7 +47,6 @@ const Checkout = () => {
             <div>Total</div>
             <div>${parseFloat(subtotal + taxes).toFixed(2)}</div>
           </div>
-
           <button onClick={handleProcessOrder}>Process Order</button>
           <Link to="/shop">
             Continue Shopping{" "}
@@ -66,14 +58,4 @@ const Checkout = () => {
   );
 };
 
-export default Checkout;
-
-{
-  /* // <div key={item.id} className={styles.checkoutItem}>
-          //   <img src={item.src} alt="book-cover" />
-          //   <div>{item.title}</div>
-          //   <div>{item.price}</div>
-          //   <div>{item.quantity}</div>
-          //   <div>{item.total}</div>
-          // </div> */
-}
+export default CheckoutPage;

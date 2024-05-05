@@ -1,24 +1,24 @@
 import { useContext, useState } from "react";
-import { StoreContext } from "../../../Context.jsx";
+import { StoreContext } from "../../Context.jsx";
 import { useParams } from "react-router-dom";
-import BookQuantity from "../BookQuantity/BookQuantity.jsx";
-import styles from "./BookDetail.module.css";
+import BookQuantity from "../../components/Books/BookQuantity/BookQuantity.jsx";
+import styles from "./BookDetailPage.module.css";
 
-const BookDetail = () => {
+const BookDetailPage = () => {
   const { products, addToCart, removeFromCart } = useContext(StoreContext);
 
   const { slug } = useParams();
-  const product = products.find((prod) => prod.slug === slug);
+  const book = products.find((prod) => prod.slug === slug);
 
-  let initialQuantity = product.inBag === true ? product.quantity : 1;
+  let initialQuantity = book.inCart === true ? book.quantity : 1;
   const [quantity, setQuantity] = useState(initialQuantity);
 
   const handleAddToCartClick = () => {
-    addToCart(product, quantity);
+    addToCart(book, quantity);
   };
 
   const handleRemoveClick = () => {
-    removeFromCart(product);
+    removeFromCart(book);
     setQuantity(1);
   };
 
@@ -26,25 +26,25 @@ const BookDetail = () => {
     <div className={styles.bookDetail}>
       <div className={styles.leftContainer}>
         <div className={styles.imageContainer}>
-          <img src={product.src} alt="book-cover" className={styles.img} />
+          <img src={book.src} alt="book-cover" className={styles.img} />
         </div>
       </div>
 
       <div className={styles.rightContainer}>
-        <h1>{product.title}</h1>
-        <h3>By {product.author}</h3>
-        <div className={styles.description}>{product.description}</div>
+        <h1>{book.title}</h1>
+        <h3>By {book.author}</h3>
+        <div className={styles.description}>{book.description}</div>
         <BookQuantity
-          id={product.id}
+          id={book.id}
           setQuantity={setQuantity}
           quantity={quantity}
         ></BookQuantity>
-        <div className={styles.price}>${product.price}</div>
-        {product.inBag ? (
+        <div className={styles.price}>${book.price}</div>
+        {book.inCart ? (
           <button
             type="button"
             className={styles.removeButton}
-            onClick={() => handleRemoveClick(product)}
+            onClick={() => handleRemoveClick(book)}
           >
             Remove from Bag
           </button>
@@ -52,7 +52,7 @@ const BookDetail = () => {
           <button
             type="button"
             className={styles.addButton}
-            onClick={() => handleAddToCartClick(product)}
+            onClick={() => handleAddToCartClick(book)}
           >
             Add to Bag
           </button>
@@ -62,4 +62,4 @@ const BookDetail = () => {
   );
 };
 
-export default BookDetail;
+export default BookDetailPage;

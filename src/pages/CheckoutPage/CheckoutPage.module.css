@@ -15,7 +15,7 @@ a {
   color: black;
 }
 
-h3 {
+.orderSummary {
   text-align: center;
 }
 .rightContainer {
@@ -77,7 +77,7 @@ button:hover {
     font-size: 0.8rem;
   }
 
-  h3 {
+  .orderSummary {
     font-size: 0.9rem;
   }
 
