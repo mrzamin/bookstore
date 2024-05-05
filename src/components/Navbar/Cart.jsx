@@ -1,6 +1,6 @@
 import { UserRoundX } from "lucide-react";
 import { Link } from "react-router-dom";
-import cartIcon from "../../../public/icons/cart.png";
+import cartIcon from "../../../public/icons/cartIcon.png";
 import { useContext } from "react";
 import { StoreContext } from "../../Context";
 import CartTooltip from "./MegaMenu/Cart Tooltip/CartTooltip";
