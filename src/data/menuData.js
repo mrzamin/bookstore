@@ -8,85 +8,59 @@ export const menuData = [
     href: "/shop",
   },
   {
-    label: "Personal Growth",
-    href: "/personalgrowth",
+    label: "Shop by Subject",
+    href: "/shopbysubject",
     children: [
       {
-        heading: "Mindset",
+        heading: "Personal Growth",
         submenu: [
-          { label: "Book 1", href: "#" },
+          { label: "Mindset", href: "shop/mindsetbooks" },
           {
-            label: "Book 2",
-            href: "#",
+            label: "Goal & Habit Setting",
+            href: "shop/goalandhabitbooks",
           },
-          { label: "Book 3", href: "#" },
+          {
+            label: "Motivation, Inspiration, & Success",
+            href: "shop/motivationbooks",
+          },
         ],
       },
       {
-        heading: "Goal Setting & Achieving",
+        heading: "Business & Entrepreneurship",
         submenu: [
-          { label: "Book 1", href: "#" },
           {
-            label: "Book 2",
-            href: "#",
+            label: "Entrepreneurship",
+            href: "shop/entrepreneurshipbooks",
           },
-          { label: "Book 3", href: "#" },
+          {
+            label: "Leadership",
+            href: "shop/leadershipbooks",
+          },
+          { label: "Communication", href: "shop/communicationbooks" },
         ],
       },
       {
-        heading: "Motivation, Inspiration, & Success",
+        heading: "Communication & Relationships",
         submenu: [
-          { label: "Book 1", href: "#" },
           {
-            label: "Book 2",
-            href: "#",
+            label: "Daily Communication",
+            href: "shop/dailycommunicationbooks",
           },
-          { label: "Book 3", href: "#" },
+          {
+            label: "Public Speaking",
+            href: "shop/publicspeakingbooks",
+          },
         ],
       },
 
       {
-        heading: "Communication and Relationships",
+        heading: "Money & Investing",
         submenu: [
-          { label: "Book 1", href: "#" },
+          { label: "Financial Freedom", href: "shop/financialfreedombooks" },
           {
-            label: "Book 2",
-            href: "#",
+            label: "Investing",
+            href: "shop/investingbooks",
           },
-          { label: "Book 3", href: "#" },
-        ],
-      },
-    ],
-  },
-  {
-    label: "Entrepreneurship",
-    href: "/entrepreneurship",
-    children: [
-      {
-        heading: "Entrepreneurship",
-        submenu: [
-          { label: "Book 1", href: "#" },
-          { label: "Book 2", href: "#" },
-          { label: "Book 3", href: "#" },
-          { label: "See all Entrepreneurship", href: "#" },
-        ],
-      },
-      {
-        heading: "Leadership",
-        submenu: [
-          { label: "Book 1", href: "#" },
-          { label: "Book 2", href: "#" },
-          { label: "Book 3", href: "#" },
-          { label: "See all Leadership", href: "#" },
-        ],
-      },
-      {
-        heading: "Communication",
-        submenu: [
-          { label: "Book 1", href: "#" },
-          { label: "Book 2", href: "#" },
-          { label: "Book 3", href: "#" },
-          { label: "See all Communication", href: "#" },
         ],
       },
     ],
