@@ -1,14 +1,5 @@
-import { useContext, useState } from "react";
-import { StoreContext } from "../../../Context";
-import plusIcon from "../../../../public/icons/plusIcon.png";
-import minusIcon from "../../../../public/icons/minusIcon.png";
 import styles from "./BookQuantity.module.css";
-const BookQuantity = ({ id, quantity, setQuantity }) => {
-  // const { setProducts, products, addToCart, removeFromCart } =
-  //   useContext(StoreContext);
-
-  // const selected = products.find((product) => product.id === id);
-
+const BookQuantity = ({ quantity, setQuantity }) => {
   const handlePlusClick = () => {
     const newQuantity = quantity + 1;
     setQuantity(newQuantity);
