@@ -1,7 +1,7 @@
 import styles from "./CartTooltip.module.css";
 import { useContext } from "react";
-import { StoreContext } from "../../../../Context";
-import deleteIcon from "../../../../../public/icons/deleteIcon.png";
+import { StoreContext } from "../../../Context";
+import deleteIcon from "../../../../public/icons/deleteIcon.png";
 
 const CartToolTip = ({ inCart }) => {
   console.log(inCart);

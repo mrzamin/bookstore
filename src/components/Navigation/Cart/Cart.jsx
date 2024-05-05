@@ -1,12 +1,12 @@
 import { UserRoundX } from "lucide-react";
 import { Link } from "react-router-dom";
-import cartIcon from "../../../public/icons/cartIcon.png";
+import cartIcon from "../../../../public/icons/cartIcon.png";
 import { useContext } from "react";
-import { StoreContext } from "../../../../Context";
+import { StoreContext } from "../../../Context";
 import CartTooltip from "./CartTooltip";
 import { Tooltip } from "react-tooltip";
 import "react-tooltip/dist/react-tooltip.css";
-import styles from "./MegaMenu/Cart/CartTooltip.module.css";
+import styles from "./CartTooltip.module.css";
 
 const Cart = () => {
   const { products } = useContext(StoreContext);

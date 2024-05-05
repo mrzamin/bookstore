@@ -3,7 +3,7 @@ import Container from "./Container";
 import MobileNavigationDrawer from "./MobileNavigationDrawer";
 import { useState } from "react";
 import logo from "../../../public/icons/appLogo.png";
-import Cart from "./MegaMenu/Cart/Cart";
+import Cart from "./Cart/Cart";
 import { AlignJustify } from "lucide-react";
 import MegaMenu from "./MegaMenu/MegaMenu";
 
