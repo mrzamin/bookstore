@@ -11,24 +11,28 @@ export function StoreContextProvider({ children }) {
     setProducts((prevProducts) =>
       prevProducts.map((prod) =>
         prod === productToAdd
-          ? { ...prod, quantity: quantity, inBag: true }
+          ? { ...prod, quantity: quantity, inCart: true }
           : prod
       )
     );
   };
 
-  const removeFromCart = (product, quantity) => {
+  const removeFromCart = (product) => {
     const productToRemove = products.find((item) => item === product);
     setProducts((prevProducts) =>
       prevProducts.map((prod) =>
-        prod === productToRemove ? { ...prod, quantity: 0, inBag: false } : prod
+        prod === productToRemove
+          ? { ...prod, quantity: 0, inCart: false }
+          : prod
       )
     );
   };
 
+  const inCart = products.filter((product) => product.inCart === true);
+
   return (
     <StoreContext.Provider
-      value={{ products, setProducts, removeFromCart, addToCart }}
+      value={{ products, setProducts, removeFromCart, addToCart, inCart }}
     >
       {children}
     </StoreContext.Provider>
