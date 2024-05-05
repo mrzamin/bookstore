@@ -1,5 +1,5 @@
 import { Outlet } from "react-router-dom";
-import Navigation from "../components/Navbar/Navigation";
+import Navigation from "../components/Navigation/Navigation";
 import { StoreContextProvider } from "../Context";
 
 const Layout = () => {
