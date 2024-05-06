@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { StoreContext } from "../../Context.jsx";
 import styles from "./CheckoutPage.module.css";
-import CheckoutItem from "../../components/Checkout/CheckoutItem.jsx";
+import CheckoutItem from "../../components/CheckoutItem/CheckoutItem.jsx";
 import { Link } from "react-router-dom";
 import arrowIcon from "../../../public/icons/arrowIcon.png";
 
@@ -26,7 +26,7 @@ const CheckoutPage = () => {
               <CheckoutItem key={item.id} {...item}></CheckoutItem>
             ))
           ) : (
-            <div>Your bag is empty.</div>
+            <div>Your cart is empty.</div>
           )}
         </div>
         <div className={styles.rightContainer}>
@@ -53,7 +53,7 @@ const CheckoutPage = () => {
           >
             Process Order
           </button>
-          <Link to="/shop">
+          <Link to="/shop" className={styles.continueShopping}>
             Continue Shopping{" "}
             <img src={arrowIcon} alt="arrow" className={styles.arrowIcon} />
           </Link>

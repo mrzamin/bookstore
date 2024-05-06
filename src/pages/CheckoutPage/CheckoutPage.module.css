@@ -4,14 +4,17 @@
 }
 
 .pageTitle {
-  margin: 1rem 0rem 1rem 0rem;
+  width: 100%;
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .arrowIcon {
   width: 14px;
 }
 
-a {
+.continueShopping {
   color: black;
 }
 
@@ -47,17 +50,17 @@ a {
   cursor: pointer;
   font-weight: bold;
   color: white;
-  background-color: #f43f5e;
+  background-color: #0f766e;
   border: none;
   border-radius: 8px;
   height: 50px;
   width: 100%;
 }
 .checkoutButton:hover {
-  background-color: #f72e4f;
+  background-color: #134e4a;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1250px) {
   .checkout {
     flex-direction: column;
   }
