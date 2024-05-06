@@ -1,12 +1,15 @@
 # Thinkfolio
 
-A frontend-based e-commerce bookstore built with React.
+A frontend-based e-commerce bookstore built with React
 
 <div align="center">
   
-[Live Demo](#)
+[Demo](#)
 
-![App Preview](public/screenshots/CheckoutPage.png)
+![HomePage Preview](https://github.com/mrzamin/bookstore/assets/142754418/8a459c02-6ae7-4b7e-bd31-e74020410e5c)
+
+
+![CheckoutPage Preview](public/screenshots/CheckoutPage.png)
 
 </div>
 
@@ -26,7 +29,7 @@ The app implements e-commerce store features with books from my personal reading
 - View Order Summary in cart including subtotal, taxes, and total
 - Responsive design
 - Minimalist UI styles
-- Nested website menu to efficiently navigate between categories, includes mobile support
+- Nested website menu to efficiently navigate between categories; includes mobile support
 - Main page carousel with featured books
 - JavaScript object-based book data
 
@@ -49,7 +52,7 @@ Located in `src`:
 
 - `components`: React non-page components (book list, increment/decrement button, etc.) and their CSS modules
 - `pages`: React page components and their CSS modules
-- `data`: Book and megamenu labels/ href data
+- `data`: Book and megamenu labels/href data
 - `utils`: Utility functions used multiple times in the app
 - **index.css**: Global styles
 - **Context.jsx**: Context API Provider component for the store
@@ -90,19 +93,19 @@ Because `products` is a state variable, a re-render is triggered every time ther
 
 ## Run Locally
 
-1. Clone the project in a folder of your choice on your computer
+1. Clone the project in a folder of your choice on your computer.
 
 ```bash
   git clone git@github.com:mrzamin/bookstore.git
 ```
 
-2. Navigate to the project directory
+2. Navigate to the project directory.
 
 ```bash
 cd bookstore
 ```
 
-3. Start the server
+3. Start the server.
 
 ```bash
 npm run dev
@@ -126,8 +129,8 @@ New additions to the list of book titles for this app are welcome! Please use th
 - Hero image from [Adobe Express](https://www.adobe.com/express/)
 - Font from [Google Fonts](https://fonts.google.com/)
 - Design inspiration from:
-- [Cengiz Inceoglu](https://dribbble.com/shots/23265949--058-DailyUI-Shopping-Cart)
+  - [Cengiz Inceoglu](https://dribbble.com/shots/23265949--058-DailyUI-Shopping-Cart)
 
-- [Paulina Preciado] (https://dribbble.com/shots/22404197-URREA-Product-Detail-Page)
+  - [Paulina Preciado](https://dribbble.com/shots/22404197-URREA-Product-Detail-Page)
 
-- [bn.com](https://www.barnesandnoble.com/)
+  - [bn.com](https://www.barnesandnoble.com/)
