@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
-import Container from "./Container/Container";
+import Container from "./NavContainer/Container";
 import MobileNavigation from "./MobileNavigation";
 import { useState } from "react";
 import logo from "../../../public/icons/appLogo.png";
-import Cart from "./Cart/Cart";
+import CartBadge from "./NavCart/CartBadge/CartBadge";
 import { AlignJustify } from "lucide-react";
-import MegaMenu from "./MegaMenu/MegaMenu";
+import MegaMenu from "./NavMenu/MegaMenu";
 
 const Navigation = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -29,7 +29,7 @@ const Navigation = () => {
             {" "}
             <MegaMenu />
           </div>
-          <Cart />
+          <CartBadge />
           <div className="md:hidden absolute">
             <MobileNavigation {...{ isDrawerOpen, setIsDrawerOpen }} />
           </div>

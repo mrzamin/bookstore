@@ -1,5 +1,5 @@
 import { X } from "lucide-react";
-import MegaMenu from "./MegaMenu/MegaMenu";
+import MegaMenu from "./NavMenu/MegaMenu";
 import { useState } from "react";
 
 const MobileNavigation = ({ isDrawerOpen, setIsDrawerOpen }) => {
@@ -9,7 +9,6 @@ const MobileNavigation = ({ isDrawerOpen, setIsDrawerOpen }) => {
     if (clicked === index) {
       return setClicked(null);
     }
-
     setClicked(index);
   };
 

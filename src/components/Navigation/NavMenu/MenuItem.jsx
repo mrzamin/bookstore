@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import Container from "../Container/Container";
+import Container from "../NavContainer/Container";
 import DropdownContent from "./DropdownContent/DropdownContent";
 import { ChevronDown, ChevronUp } from "lucide-react";
 
@@ -12,7 +12,6 @@ const MenuItem = ({
   setIsDrawerOpen,
 }) => {
   const handleClick = () => {
-    // Blur the active element to lose focus
     const activeElement = document.activeElement;
     activeElement.blur();
   };

@@ -1,11 +1,10 @@
 import styles from "./CartTooltip.module.css";
 import { useContext } from "react";
-import { StoreContext } from "../../../Context";
-import deleteIcon from "../../../../public/icons/deleteIcon.png";
+import { StoreContext } from "../../../../Context";
+import deleteIcon from "../../../../../public/icons/deleteIcon.png";
 
 const CartToolTip = ({ inCart }) => {
-  console.log(inCart);
-  const { products, addToCart, removeFromCart } = useContext(StoreContext);
+  const { products, removeFromCart } = useContext(StoreContext);
 
   const handleDelete = (id) => {
     const product = products.find((prod) => prod.id === id);
@@ -14,7 +13,7 @@ const CartToolTip = ({ inCart }) => {
   };
   return (
     <div className={styles.cartTooltip}>
-      <h2>Cart</h2>
+      <h2 className={styles.heading}>Cart</h2>
       {inCart.length > 0 ? (
         <div className={styles.bookList}>
           {inCart.map((book) => (

@@ -1,17 +1,14 @@
-import { UserRoundX } from "lucide-react";
 import { Link } from "react-router-dom";
-import cartIcon from "../../../../public/icons/cartIcon.png";
+import cartIcon from "../../../../../public/icons/cartIcon.png";
 import { useContext } from "react";
-import { StoreContext } from "../../../Context";
-import CartTooltip from "./CartTooltip";
+import { StoreContext } from "../../../../Context";
+import CartTooltip from "../CartTooltip/CartTooltip";
 import { Tooltip } from "react-tooltip";
 import "react-tooltip/dist/react-tooltip.css";
-import styles from "./CartTooltip.module.css";
+import styles from "./CartBadge.module.css";
 
 const Cart = () => {
-  const { products } = useContext(StoreContext);
-
-  const inCart = products.filter((product) => product.inBag === true);
+  const { inCart } = useContext(StoreContext);
 
   const inCartTotal = inCart.reduce((total, book) => total + book.quantity, 0);
 
@@ -19,15 +16,26 @@ const Cart = () => {
     <div className="register">
       <div className="block md:hidden">
         <div className="avatar">
-          <UserRoundX />
+          <Link
+            to="/checkout"
+            data-tooltip-id="tooltip"
+            className={styles.cart}
+          >
+            <img src={cartIcon} width="40px" alt="cart" />
+            {inCart.length > 0 && (
+              <div className={styles.itemsInCart}>
+                <span>{inCartTotal}</span>
+              </div>
+            )}
+          </Link>{" "}
         </div>
       </div>
       <div className="hidden md:block navCart">
-        <Link to="/checkout" data-tooltip-id="tooltip" className="cart">
+        <Link to="/checkout" data-tooltip-id="tooltip" className={styles.cart}>
           <div>Cart</div>
           <img src={cartIcon} width="40px" alt="cart" />
           {inCart.length > 0 && (
-            <div className="itemsInCart">
+            <div className={styles.itemsInCart}>
               <span>{inCartTotal}</span>
             </div>
           )}
