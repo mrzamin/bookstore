@@ -11,6 +11,11 @@
   border: 1px solid grey;
 }
 
+.minusButton:hover,
+.plusButton:hover {
+  background-color: #edebeb;
+}
+
 .bookQuantity {
   display: flex;
   text-align: center;

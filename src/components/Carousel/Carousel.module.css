@@ -4,11 +4,14 @@
   width: 300px;
   font-size: 0.8rem;
   border-radius: 15px;
-
   display: grid;
   place-items: center;
   align-content: center;
   gap: 0.3rem;
+}
+
+.carouselItem:hover {
+  background-color: #edebeb;
 }
 
 .carousel {

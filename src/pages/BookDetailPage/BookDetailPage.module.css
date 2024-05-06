@@ -21,9 +21,12 @@
   background-color: #f6f3f4;
   border-radius: 8px;
   position: relative;
-
   display: grid;
   place-items: center;
+}
+
+.imageContainer:hover {
+  background-color: #edebeb;
 }
 
 .img {
@@ -36,7 +39,7 @@
   cursor: pointer;
   font-weight: bold;
   color: white;
-  background-color: #f43f5e;
+  background-color: #0f766e;
   border: none;
   border-radius: 8px;
   height: 50px;
@@ -45,11 +48,12 @@
 
 .addButton:hover,
 .removeButton:hover {
-  background-color: #f72e4f;
+  background-color: #134e4a;
 }
 
 .description {
   line-height: 1.5;
+  font-size: 0.9rem;
 }
 
 .price {

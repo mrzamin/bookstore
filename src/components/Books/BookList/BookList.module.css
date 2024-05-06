@@ -20,6 +20,10 @@
   place-items: center;
 }
 
+.bookCard:hover {
+  background-color: #edebeb;
+}
+
 .productTitle,
 .productAuthor {
   max-width: 100%;
