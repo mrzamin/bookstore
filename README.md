@@ -6,10 +6,9 @@ A frontend-based e-commerce bookstore built with React.
   
 [Live Demo](#)
 
-![App Preview]()
+![App Preview](public/screenshots/CheckoutPage.png)
 
 </div>
-
 
 ## Demo
 
@@ -111,12 +110,24 @@ npm run dev
 
 New additions to the list of book titles for this app are welcome! Please use the [fork and pull request workflow](https://docs.github.com/en/get-started/exploring-projects-on-github/contributing-to-a-projecthttps://docs.github.com/en/get-started/exploring-projects-on-github/contributing-to-a-project).
 
-## Lessons Learned
-
 ## What I'd Like to Work On in the Future
 
 - Add local storage to save user's shopping items
-- Fix semantic HTML issues for improved accessibility
+- Allow user search
+- Add book filters
 - Add star ratings for books
 - Implement fake REST API endpoints to simulate fetching data from a database or server
 - Test the app with React Testing Library
+- Fix semantic HTML issues for improved accessibility
+
+## Credits
+
+- App icons from [The Noun Project](https://thenounproject.com/)
+- Hero image from [Adobe Express](https://www.adobe.com/express/)
+- Font from [Google Fonts](https://fonts.google.com/)
+- Design inspiration from:
+- [Cengiz Inceoglu](https://dribbble.com/shots/23265949--058-DailyUI-Shopping-Cart)
+
+- [Paulina Preciado] (https://dribbble.com/shots/22404197-URREA-Product-Detail-Page)
+
+- [bn.com](https://www.barnesandnoble.com/)
