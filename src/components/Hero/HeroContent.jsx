@@ -1,4 +1,4 @@
-import Container from "../Navigation/Container/Container";
+import Container from "../Navigation/NavContainer/Container";
 import defaultHero from "../../../public/images/pastel-abstract.png";
 import styles from "./Hero.module.css";
 
