@@ -4,14 +4,11 @@ import styles from "./CheckoutItem.module.css";
 import BookQuantity from "../Books/BookQuantity/BookQuantity.jsx";
 import { Link } from "react-router-dom";
 import deleteIcon from "../../../public/icons/deleteIcon.png";
-const CheckoutItem = ({ author, src, slug, title, price, id, quantity }) => {
+
+const CheckoutItem = ({ src, slug, title, price, id, quantity }) => {
   const { products, addToCart, removeFromCart } = useContext(StoreContext);
-  console.log(products);
-
   const product = products.find((prod) => prod.id === id);
-
   const [amount, setAmount] = useState(quantity);
-
   const total = (price * amount).toFixed(2);
 
   useEffect(() => {
