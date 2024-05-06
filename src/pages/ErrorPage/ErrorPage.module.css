@@ -1,8 +1,29 @@
 .errorPage {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  margin: auto;
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.errorDiv {
+  display: grid;
+  gap: 1rem;
+  place-items: center;
+  text-align: center;
+  border: 2px solid rgb(237, 236, 236);
+  padding: 3rem;
+  margin: 1rem;
+}
+
+.errorDiv h1,
+.errorDiv a {
+  color: #134e4a;
+}
+
+.logo {
+  width: 50px;
+}
+
+.errorDiv a {
+  text-decoration: underline;
 }
