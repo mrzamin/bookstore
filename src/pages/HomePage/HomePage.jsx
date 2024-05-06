@@ -10,7 +10,7 @@ const HomePage = () => {
     <>
       <Hero>
         <HeroContent imageSrc={hero}>
-          <HeroTitle title="Thinkfolio Bookstore" />
+          <HeroTitle title="Thinkfolio" />
           <Link to="/shop">
             <button className={styles.shopAllButton}>Shop All</button>
           </Link>
