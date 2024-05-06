@@ -9,18 +9,17 @@ import ShopPage from "./pages/ShopPage/ShopPage.jsx";
 import HomePage from "./pages/HomePage/HomePage.jsx";
 import BookDetailPage from "./pages/BookDetailPage/BookDetailPage.jsx";
 import CheckoutPage from "./pages/CheckoutPage/CheckoutPage.jsx";
-
-import MindsetPage from "./pages/topic pages/MindsetPage.jsx";
-import GoalSettingPage from "./pages/topic pages/GoalSettingandHabitsPage.jsx";
-import MotivationPage from "./pages/topic pages/MotivationPage.jsx";
-import EntrepreneurshipPage from "./pages/topic pages/EntrepreneurshipPage.jsx";
-import LeadershipPage from "./pages/topic pages/LeadershipPage.jsx";
-import CommunicationPage from "./pages/topic pages/CommunicationPage.jsx";
-import DailyCommunicationPage from "./pages/topic pages/DailyCommunicationPage.jsx";
-import PublicSpeakingPage from "./pages/topic pages/PublicSpeakingPage.jsx";
-import MoneyPage from "./pages/topic pages/MoneyPage.jsx";
-import FinancialFreedomPage from "./pages/topic pages/FinancialFreedomPage.jsx";
-import InvestingPage from "./pages/topic pages/InvestingPage.jsx";
+import MindsetPage from "./pages/categoryPages/MindsetPage.jsx";
+import GoalSettingPage from "./pages/categoryPages/GoalSettingandHabitsPage.jsx";
+import MotivationPage from "./pages/categoryPages/MotivationPage.jsx";
+import EntrepreneurshipPage from "./pages/categoryPages/EntrepreneurshipPage.jsx";
+import LeadershipPage from "./pages/categoryPages/LeadershipPage.jsx";
+import CommunicationPage from "./pages/categoryPages/CommunicationPage.jsx";
+import DailyCommunicationPage from "./pages/categoryPages/DailyCommunicationPage.jsx";
+import PublicSpeakingPage from "./pages/categoryPages/PublicSpeakingPage.jsx";
+import MoneyPage from "./pages/categoryPages/MoneyPage.jsx";
+import FinancialFreedomPage from "./pages/categoryPages/FinancialFreedomPage.jsx";
+import InvestingPage from "./pages/categoryPages/InvestingPage.jsx";
 
 const router = createBrowserRouter([
   {
@@ -55,10 +54,6 @@ const router = createBrowserRouter([
       {
         path: "shop/mindsetbooks",
         element: <MindsetPage />,
-      },
-      {
-        path: "shop/mindsetbooks/:slug",
-        element: <BookDetailPage />,
       },
 
       {
