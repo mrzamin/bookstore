@@ -13,10 +13,6 @@ A frontend-based e-commerce bookstore built with React
 
 </div>
 
-## Demo
-
-Insert gif or link to demo
-
 ## About This Project
 
 The app implements e-commerce store features with books from my personal reading wishlist as example products. Users can browse products by category, click to view detailed product info, add products to the cart, edit cart contents, and visit the cart to simulate a mock checkout process.
@@ -111,14 +107,14 @@ cd bookstore
 npm run dev
 ```
 
-New additions to the list of book titles for this app are welcome! Please use the [fork and pull request workflow](https://docs.github.com/en/get-started/exploring-projects-on-github/contributing-to-a-projecthttps://docs.github.com/en/get-started/exploring-projects-on-github/contributing-to-a-project).
+New additions to the list of book titles for this app are welcome! Please use the [fork and pull request workflow](https://docs.github.com/en/pull-requests).
 
 ## What I'd Like to Work On in the Future
 
 - Add local storage to save user's shopping items
 - Allow user search
 - Add book filters
-- Add star ratings for books
+- Add book star ratings
 - Implement fake REST API endpoints to simulate fetching data from a database or server
 - Test the app with React Testing Library
 - Fix semantic HTML issues for improved accessibility
